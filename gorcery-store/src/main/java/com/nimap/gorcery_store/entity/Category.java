@@ -24,10 +24,12 @@ public class Category {
 	private String name;
 	private String type;
 	
-	@OneToMany(targetEntity = Product.class, cascade = CascadeType.ALL, mappedBy = "category")
-
-	private List<Product> productList;
-
+	/*
+	 * @OneToMany(targetEntity = Product.class, cascade = CascadeType.ALL, mappedBy
+	 * = "category")
+	 * 
+	 * private List<Product> productList;
+	 */
 	public Category() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -38,7 +40,7 @@ public class Category {
 		this.id = id;
 		this.name = name;
 		this.type = type;
-		this.productList = productList;
+		//this.productList = productList;
 	}
 
 	public Integer getId() {
@@ -65,17 +67,15 @@ public class Category {
 		this.type = type;
 	}
 
-	public List<Product> getProductList() {
-		return productList;
-	}
-
-	public void setProductList(List<Product> productList) {
-		this.productList = productList;
-	}
-
+	/*
+	 * public List<Product> getProductList() { return productList; }
+	 * 
+	 * public void setProductList(List<Product> productList) { this.productList =
+	 * productList; }
+	 */
 	@Override
 	public String toString() {
-		return "Category [id=" + id + ", name=" + name + ", type=" + type + ", productList=" + productList + "]";
+		return "Category [id=" + id + ", name=" + name + ", type=" + type + ", productList=" + "]";
 	}
 
 	
